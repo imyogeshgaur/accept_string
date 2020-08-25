@@ -43,7 +43,7 @@
             const output = document.getElementById('output');
             var inputVal = document.getElementById("myInput").value;
             
-            var grammer  = /ab*c/
+            var grammer  = /[a,A][b,B]*[c,C]/
 
             if(grammer.test(inputVal)){
                 output.innerHTML = `String ${inputVal} is accepted !!!`;
