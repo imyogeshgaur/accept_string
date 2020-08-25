@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Accepted</title>
+    <style>
+        #myInput
+        {
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            margin-top:340px;
+            position:relative;
+            left: 600px;
+        }
+        #btn{
+            position: relative;
+            left:630px;
+            top:10px;
+            
+        }
+        .output
+        {
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            position:absolute;
+            top:200px;
+            left:600px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="Enter Your String" id="myInput">
+    <button type="button" id= 'btn' onclick="checkAccept();">Get Value</button>
+    <div class="output">
+        <h1 id="output"></h1>
+    </div>
+    <script>
+        function checkAccept(){
+            // Selecting the input element and get its value 
+            const output = document.getElementById('output');
+            var inputVal = document.getElementById("myInput").value;
+            
+            var grammer  = /ab*c/
+
+            if(grammer.test(inputVal)){
+                output.innerHTML = `String ${inputVal} is accepted !!!`;
+            }
+            else{
+                output.innerHTML = `String ${inputVal} is  not accepted !!!`;
+            }
+        }
+    </script>
+</body>
+</html>
